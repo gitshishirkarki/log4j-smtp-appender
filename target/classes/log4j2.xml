@@ -1,0 +1,20 @@
+<Configuration name="Log4jConfiguration" status="TRACE"
+	strict="true" schema="Log4J-V2.0.xsd">
+	<Properties>
+		<Property name="to-email">${bundle:application-${bundle:application:spring.profiles.active}:mail.to}</Property>
+		<Property name="from-email">${bundle:application-local:mail.from}</Property>
+	</Properties>
+	<Appenders>
+		 <SMTP name="Mail" subject="Error Log" to="${to-email}"
+	from="${from-email}" smtpHost="smtp.gmail.com" smtpPort="587"
+	bufferSize="50" smtpPassword="xxx" ignoreExceptions="false"
+	smtpUsername="skarki2" smtpProtocol="smtp">
+    </SMTP>
+	</Appenders>
+
+	<Loggers>
+		<Root level="TRACE">
+			<AppenderRef ref="Mail" />
+		</Root>
+	</Loggers>
+</Configuration>
