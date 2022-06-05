@@ -1,6 +1,6 @@
 # Log4j2 SMTP appender
 ## Project Description 
-This is a sample project that uses Log4j SMTP appender feature to send email as per the provided configuration. 
+This is a sample project that uses Log4j SMTP appender feature to send email as per the provided configuration (application-local.properties and log4j2.xml under src.main.resources path). 
 The email is sent whenever there occurs log level as ERROR. 
 
 ## Requirements
